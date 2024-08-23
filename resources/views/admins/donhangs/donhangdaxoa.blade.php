@@ -46,7 +46,7 @@
                                                                 <button type="submit" class="btn btn-success">Khôi
                                                                     phục</button>
                                                             </form>
-                                                            <form
+                                                            {{-- <form
                                                                 action="{{ route('admins.donhangs.force-delete', $donHang->id) }}"
                                                                 method="POST" style="display:inline-block;">
                                                                 @csrf
@@ -54,7 +54,7 @@
                                                                 <button type="submit" class="btn btn-danger"
                                                                     onclick="return confirm('Bạn có chắc chắn muốn xóa vĩnh viễn đơn hàng này?')">Xóa
                                                                     vĩnh viễn</button>
-                                                            </form>
+                                                            </form> --}}
                                                         </td>
                                                     </tr>
                                                 @endforeach

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->double('don_gia');
             $table->unsignedInteger('so_luong');
             $table->double('thanh_tien');
-
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -110,7 +110,7 @@ class DonHangController extends Controller
         $donHang = DonHang::withTrashed()->findOrFail($id);
         $donHang->restore();
 
-        return redirect()->route('admins.donhangs.deleted')->with('success', 'Khôi phục đơn hàng thành công');
+        return redirect()->route('admins.donhangs.index')->with('success', 'Khôi phục đơn hàng thành công');
     }
 
     public function forceDelete($id)

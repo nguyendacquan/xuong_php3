@@ -48,7 +48,7 @@ class CouponController extends Controller
 
         // Lưu mã giảm giá đã sử dụng vào cơ sở dữ liệu
         $user->coupons()->attach($coupon->id);
-
+        session()->flash('coupon_applied', true);
         return redirect()->back()->with('success', 'Coupon applied successfully');
     }
 
@@ -66,7 +66,8 @@ class CouponController extends Controller
             // Xóa mã giảm giá khỏi phiên
             session()->forget('coupon');
         }
-
+        session()->forget('coupon_applied');
+        
         return redirect()->back()->with('success', 'Coupon removed successfully');
     }
 }

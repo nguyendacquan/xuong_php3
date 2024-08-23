@@ -23,20 +23,20 @@ return new class extends Migration
 
             $table->string('ten_nguoi_nhan');
             $table->string('email_nguoi_nhan');
-            $table->string('so_dien_thoai_nguoi_nhan',10);
+            $table->string('so_dien_thoai_nguoi_nhan', 10);
             $table->string('dia_chi_nguoi_nhan');
             $table->string('gi_chu')->nullable();
 
             // luu tru thong tin de quan li don hang
             $table->string('trang_thai_don_hang')->default(DonHang::CHO_XAC_NHAN);
             $table->string('trang_thai_thanh_toan')->default(DonHang::CHUA_THANH_TOAN);
-            
+
             $table->double('tien_hang');
             $table->double('tien_ship');
             $table->double('tong_tien');
 
 
-
+            $table->softDeletes();
 
 
             $table->timestamps();
